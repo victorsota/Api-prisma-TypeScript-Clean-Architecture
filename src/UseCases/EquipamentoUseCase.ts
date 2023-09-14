@@ -1,7 +1,7 @@
 import { Equipamento } from "../entities/Equipamento";
 import { EquipamentoRepository } from "../repositories/EquipamentoRepository";
 
-export class EquipamentoUse{
+export class EquipamentoUseCase{
     private equipamentoRepository : EquipamentoRepository;
 
     constructor(){
