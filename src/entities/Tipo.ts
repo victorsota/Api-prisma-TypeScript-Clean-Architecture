@@ -1,18 +1,36 @@
-import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
+import { randomUUID } from "crypto";
 
-export interface Tipo {
-  id: number;
+interface TipoInterface {
+  get id(): string;
+  get name(): string;
+  get description(): string;
+}
+// descreve as propriedades do objeto que será criado
+export type TipoProps = {
+  id?: string;
   name: string;
   description: string;
-}
+};
 
-export async function createTipo(tipo: Tipo) {
-  const newTipo = await prisma.tipo.create({
-    data: {
-      name: tipo.name,
-      description: tipo.description,
-    },
-  });
-  return newTipo;
+export default class Tipo implements TipoInterface {
+  private _id: string;
+  private _name: string;
+  private _description: string;
+
+  constructor(props: TipoProps) {
+    this._id = props.id || randomUUID();
+    this._name = props.name;
+    this._description = props.description;
+  }
+
+  get id(): string {
+    return this._id;
+  }
+
+  get name(): string {
+    return this._name;
+  }
+  get description(): string {
+    return this._description;
+  }
 }

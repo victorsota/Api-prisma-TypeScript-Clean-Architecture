@@ -14,10 +14,12 @@ model equipamento {
   id    Int     @id @default(autoincrement())
   name String  @unique
   descrition  String?
+  tipoId Int
+  tipo tipo @relation(fields: [tipoId], references: [id])
 }
 
 model tipo {
   id        Int     @id @default(autoincrement())
   nome     String
-  equipamentos Equipamento[]
+  equipamento equipamento[]
 }
