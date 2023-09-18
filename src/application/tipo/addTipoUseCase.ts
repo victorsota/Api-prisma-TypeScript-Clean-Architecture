@@ -1,5 +1,5 @@
-import Tipo from "../entities/Tipo";
-import TipoRepositoryInterface from "../interfaces/TipoRepositoryInterface";
+import Tipo from "../../entities/Tipo";
+import TipoRepositoryInterface from "../../interfaces/TipoRepositoryInterface";
 
 interface AddTipoInputDto {
   name: string;

@@ -1,7 +1,7 @@
-import AddTipoUseCase from "../application/addTipoUseCase";
-import FindAllTipoUseCase from "../application/findAllTipoUseCase";
-import FindTipoUseCase from "../application/findTipoUseCase";
-import UpdateTipoUseCase from "../application/updateTipoUseCase";
+import AddTipoUseCase from "../application/tipo/addTipoUseCase";
+import FindAllTipoUseCase from "../application/tipo/findAllTipoUseCase";
+import FindTipoUseCase from "../application/tipo/findTipoUseCase";
+import UpdateTipoUseCase from "../application/tipo/updateTipoUseCase";
 import TipoFacade from "../facade/TipoFacade";
 import TipoRepositoryImpl from "../repositories/TipoRepository";
 

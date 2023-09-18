@@ -1,6 +1,6 @@
-import Tipo from "../entities/Tipo";
-import TipoRepositoryInterface from "../interfaces/TipoRepositoryInterface";
-import { SharedUseCaseInterface } from "../shared/shared.use.case.interface";
+import Tipo from "../../entities/Tipo";
+import TipoRepositoryInterface from "../../interfaces/TipoRepositoryInterface";
+import { SharedUseCaseInterface } from "../../shared/shared.use.case.interface";
 
 export interface FindTipoInputDto {
   id: string;

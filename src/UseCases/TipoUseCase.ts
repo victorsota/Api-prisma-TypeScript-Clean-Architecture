@@ -1,5 +1,5 @@
-import { Tipo } from "../entities/Tipo";
-import { TipoRepository } from "../repositories/TipoRepository";
+import Tipo from "../entities/Tipo";
+import TipoRepository from "../repositories/TipoRepository";
 
 export class TipoUseCase {
   private tipoRepository: TipoRepository;
@@ -9,6 +9,6 @@ export class TipoUseCase {
   }
 
   async createTipo(tipo: Tipo) {
-    return await this.tipoRepository.createTipo(tipo);
+    return await this.tipoRepository.add(tipo);
   }
 }
